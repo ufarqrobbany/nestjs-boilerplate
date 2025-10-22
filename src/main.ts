@@ -84,6 +84,7 @@ async function bootstrap() {
   // );
 
   // (c) Daftarkan helper kustom kita (block & contentFor) ke HBS
+  // hbs.registerPartials(...) memberitahu engine di mana mencari file-file partial.
   try {
     if (typeof hbs.registerPartials === 'function') {
       hbs.registerPartials(path.join(process.cwd(), 'themes/default/views/partials'));

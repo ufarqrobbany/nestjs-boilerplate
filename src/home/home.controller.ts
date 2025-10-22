@@ -35,4 +35,10 @@ export class HomeController {
       pageTitle: 'Tentang Kami',
     });
   }
+   @Get('/pages') // Route baru
+  public pages(@Res() res: Response) {
+    this.viewService.render(res, 'pages/pagaes', {
+      pageTitle: 'Tentang Kami',
+    });
+  }
 } // Akhir class HomeController

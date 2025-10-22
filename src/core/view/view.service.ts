@@ -30,7 +30,7 @@ export class ViewService {
       year: new Date().getFullYear(),
     };
 
-    // Memanggil fungsi render Express/HBS yang sebenarnya
+    // Memanggil fungsi render HBS yang sebenarnya
     res.render(resolvedViewPath, fullData, (err, html) => {
       if (err) throw new InternalServerErrorException(`Gagal merender view: ${err.message}`);
       res.send(html);
